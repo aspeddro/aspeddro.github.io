@@ -10,16 +10,21 @@
   </head>
 
   <body>
-    <header>
-      {%- if site.title -%}
-        <h1><a href="/">{{ site.title }}</a></h1>
-      {%- endif -%}
+    <header class="main-header">
+      <nav>
+        {%- if site.title -%}
+        <h1>
+          <a href="/"><img alt="{{ site.title }}" src="https://avatars.githubusercontent.com/u/16160544?v=4"/></a>
+        </h1>
+        {%- endif -%}
+        <ul>
+          <li><a href="/sobre">Sobre</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+    <main aria-label="content">
+      {{ content }}
     </main>
 
   </body>

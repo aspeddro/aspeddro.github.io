@@ -1,15 +1,12 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default
 ---
 
-## Hi there 👋
+# Olá 👋
 
-My name is Pedro Castro and I'm an Economics student.
+Meu nome é Pedro Castro, sou estudante de economia
 
-Contact:
+Contato:
 
 - [pdesacastro@gmail.com](mailto:pdesacastro@gmail.com)
 

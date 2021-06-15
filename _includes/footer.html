@@ -3,10 +3,10 @@
   {%- if site.author %}
     <div class="info">
       {% if site.author.name -%}
-        <li class="p-name">{{ site.author.name | escape }}</li>
+        <span class="p-name">{{ site.author.name | escape }}</span>
       {% endif -%}
       {% if site.author.email -%}
-        <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+        <a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
       {%- endif %}
     </div>
   {%- endif %}

@@ -12,5 +12,8 @@ github_username: aspeddro
 github_user_id: 16160544
 # Build settings
 theme: minima
+sass:
+  sass_dir: _sass
+  style: compressed
 plugins:
   - jekyll-feed

@@ -1,16 +1,34 @@
 ---
 layout: post
-title:  "Hello World!!!"
-date:   2021-06-10 04:44:20 +0000
-categories: jekyll update
+title: "Hello World!!!"
+description: |
+  Sunt velit officia magna proident voluptate quis commodo. Cillum pariatur dolore exercitation laborum commodo quis voluptate adipisicing labore ipsum ex nostrud ipsum dolor.
+author: 
+  - Pedro Castro
+  - João
+date: 2021-06-10 04:44:20 +0000
 ---
+
+## Intro
 
 Eu reprehenderit Lorem tempor esse. Cupidatat nisi commodo magna eiusmod deserunt quis exercitation. Dolor eiusmod ullamco sit cupidatat occaecat deserunt incididunt. Commodo dolor id irure esse eu enim amet eiusmod. Dolor est fugiat sunt sit voluptate eu ipsum dolor. Voluptate eu nulla tempor nostrud tempor qui aliqua nostrud. Consectetur exercitation laboris deserunt anim excepteur Lorem. Laboris nulla Lorem amet exercitation mollit culpa.
 
 Irure sint irure minim cupidatat dolor occaecat nostrud eiusmod nostrud amet fugiat exercitation cillum. Nulla dolor tempor duis do labore velit Lorem et nisi laborum tempor ea cillum excepteur. Eu enim fugiat culpa dolore adipisicing amet deserunt aliquip reprehenderit commodo eiusmod anim nulla. Commodo sint duis anim mollit et duis. Pariatur est fugiat irure est laboris Lorem in dolore Lorem voluptate ad do. Eiusmod aliqua laboris nulla ut aliquip ut velit mollit ex et labore ipsum. Velit exercitation ex Lorem nostrud cupidatat sunt nostrud reprehenderit et laborum aliqua fugiat. Amet dolore dolor irure esse velit qui qui est tempor officia qui culpa reprehenderit.
 
+
+## Images
+
+![Unsplash](https://images.unsplash.com/photo-1623779334213-1fb9f70c4a4d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80)
+
+## Lists
+
 - One
 - Two
+
+1. One
+2. Two
+
+## Code
 
 `src/main.js` file.
 

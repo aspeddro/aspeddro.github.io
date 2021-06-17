@@ -12,13 +12,35 @@
     element.appendChild(anchor);
   });
 
-})();
-
-window.addEventListener('DOMContentLoaded', () => {
-  Array.from(document.querySelectorAll('code[class*="language-"]'))
-  .map((element) => {
-    const lang_name = element.className.match("-\\w+")[0].replace("-", "").toUpperCase();
-    const parent = element.parentElement.parentElement.parentElement;
-    parent.setAttribute("language", lang_name);
+  Prism.plugins.toolbar.registerButton('Language', (env) => {
+    const span = document.createElement("span");
+    span.textContent = env.language;
+    return span;
   });
-});
+
+  if (navigator.clipboard) {
+    Prism.plugins.toolbar.registerButton('Copy', (env) => {
+      const copyButton = document.createElement('button');
+      copyButton.setAttribute("type", "button");
+      copyButton.setAttribute("aria-label", "Copy");
+      copyButton.textContent = "📋";
+
+      copyButton.addEventListener('click', () => {
+        navigator.clipboard.writeText(env.code)
+        .then(() => {
+          copyButton.classList.add('copy-sucess');
+        })
+        .catch(err => {
+          console.log(err);
+          copyButton.classList.add('copy-error');
+        });
+        setTimeout(() => {
+          copyButton.className = "";
+        }, 1000)
+      });
+
+      return copyButton;
+    });
+  }
+
+})();

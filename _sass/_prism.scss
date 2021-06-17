@@ -1,0 +1,49 @@
+div[class*="language-"] div[class*="highlight"] .code-toolbar {
+  position: relative;
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .toolbar-item {
+      position: absolute;
+      right: 0;
+      padding: 0.5rem;
+
+      &:first-child {
+        text-transform: uppercase;
+        color: var(--text-color);
+      }
+
+      &:last-child {
+        opacity: 0;
+
+        button {
+          padding: 0.5rem;
+          border-radius: var(--rounded);
+          box-shadow: var(--shadow-scale-1);
+          border: 1px solid transparent;
+          &.copy-sucess {
+            border-color: var(--color-green-scale-1);
+          }
+          &.copy-errpr {
+            border-color: var(--color-red-scale-1);
+          }
+        }
+      }
+    
+    }
+  }
+
+  &:hover {
+    .toolbar-item {
+      &:first-child {
+        opacity: 0;
+      }
+      &:last-child {
+        opacity: 1;
+      }
+    }
+  }
+}

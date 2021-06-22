@@ -12,6 +12,10 @@ github_username: aspeddro
 github_user_id: 16160544
 # Build settings
 theme: minima
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
 sass:
   sass_dir: _sass
   style: compressed

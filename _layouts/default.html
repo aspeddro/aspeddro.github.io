@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {%- seo -%}
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/katex.css" | relative_url }}">
   </head>
 
   <body>
@@ -36,7 +37,8 @@
     </main>
 
     {%- include footer.html -%}
-   <script src="/assets/js/main.js"></script>
+   <script type="module" src="/dist/main.js"></script>
+   <script nomodule src="/dist/main.legacy.js"></script>
   </body>
 
 </html>

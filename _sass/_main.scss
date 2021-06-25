@@ -34,6 +34,12 @@ img {
   max-width: 100%;
 }
 
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
 svg {
   width: 1.1rem;
   height: 1.1rem;
@@ -70,6 +76,10 @@ main {
       display: flex;
       align-items: center;
 
+      li {
+        list-style: none;
+      }
+
       li:not(:last-child) {
         margin-right: 1.3em;
       }
@@ -89,53 +99,74 @@ main {
   }
 }
 
-.post-link {
-  color: var(--text-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: var(--rounded);
-  padding: 1rem 1.2rem;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.12);
-  transition: all .3s;
-  
-  &:hover {
-    color: var(--main-color);
-    box-shadow: 0 0 14px rgba(0, 0, 0, 0.12);
-  }
-
-  h3 {
-    font-size: 1.1rem;
-    margin: 0;
-  }
-
-  .post-meta {
+.posts {
+  .post-list-heading {
     font-size: 0.8rem;
-    font-weight: 700;
+    text-transform: uppercase;
   }
+}
 
+.post-item {
+  margin: 1.6rem 0;
+  &:first-child {
+    margin-top: 0;
+  }
+  .post-meta {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.8em;
+    font-weight: 600;
+    time::after {
+      content: " •";
+    }
+  }
+  .post-link {
+    color: var(--text-color);
+    display: block;
+      
+    &:hover {
+      color: var(--main-color);
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+  }
 }
 
 .post-header {
+  font-size: 2.5rem;
+
   .post-title {
     margin: 0;
-    font-size: 2.3rem;
+    font-size: 1em;
     color: var(--text-color-dark);
   }
 
   .post-description {
     font-size: 1.2rem;
+    margin: 1rem 0;
     font-weight: 300;
     color: var(--text-color-dark);
   }
   
   .post-meta {
-    font-size: 0.9rem;
-    color: var(--text-color);
     margin: 0 0 1rem 0;
   }
 
+  .post-read-time::before {
+    content: "• ";
+  }
+
+  .post-authors, .post-meta {
+    font-size: 0.3em;
+    font-weight: 600;
+  }
+
   .share-btn {
+    margin-bottom: 0.5em;
     svg {
       fill: var(--text-color);
     }
@@ -148,7 +179,7 @@ main {
     color: var(--text-color-dark);
     font-weight: 700;
     margin: 2rem 0;
-    display: inline-block;
+    display: block;
     
     a {
       margin-left: 0.3rem;
@@ -161,8 +192,14 @@ main {
       }
     }
   }
+  ul, ol {
+    padding-left: 2em;
+  }
   li {
     margin: 0.5rem 0;
+  }
+  table {
+    margin: 0 auto;
   }
 }
 

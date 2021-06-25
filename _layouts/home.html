@@ -22,21 +22,29 @@ layout: default
   {%- if posts.size > 0 -%}
     <section class="posts">
       {%- if page.list_title -%}
-        <h2 class="post-list-heading">Ultimas Postagens:</h2>
       {%- endif -%}
-      <h2 class="post-list-heading">Posts:</h2>
       <div class="post-list">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {%- for post in posts -%}
-        <div class="post-item">
+        <article class="post-item">
+          <span class="post-meta">
+            <time>{{ post.date | date: "%m/%d/%Y" }}</time>
+            <span>
+              {% assign words = post.content | number_of_words %}
+              {% if words < 360 %}
+                1 min
+              {% else %}
+                {{ words | divided_by:180 }} mins
+              {% endif %}
+            </span>
+          </span>
           <a class="post-link" href="{{ post.url | relative_url }}">
             <h3>{{ post.title | escape }}</h3>
-            <span class="post-meta">{{ post.date | date: "%m/%d/%Y" }}</span>
           </a>
           {%- if site.show_excerpts -%}
             {{ post.excerpt }}
           {%- endif -%}
-        </div>
+        </article>
         {%- endfor -%}
       </div>
 

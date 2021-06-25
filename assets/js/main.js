@@ -32,12 +32,41 @@
     }
   });
   
-  const postContent = document.querySelector(".post-content");
-  postContent !== null && [...postContent.querySelectorAll("h1, h2, h3, h4, h5, h6")].map((element) => {
+  const postContent = document.getElementsByClassName("post-content")[0];
+  postContent !== undefined && postContent.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach((element) => {
     const anchor = document.createElement("a");
     anchor.textContent = "#";
     anchor.setAttribute("href", "#" + element.getAttribute("id"));
     element.appendChild(anchor);
   });
+
+  const hasLatex = (nodes) => {
+    
+    const containTex = nodes => 
+      [...nodes].some(node => node.nodeName === "#text" && /(\$|\$$|\\\[|\\\]|\\\(|\\\))/gi.test(node.textContent));
+
+    if ([...nodes].length === 0) {
+      return false;
+    }
+
+    if (containTex(nodes)) {
+      return true;
+    }
+
+    const parser = [...nodes]
+      .map(node => [...node.childNodes])
+      .flat(Infinity)
+      .filter(node => node.nodeName !== "CODE" && node.nodeName !== "PRE");
+    
+      return hasLatex(parser);
+  }
+
+  if (postContent !== undefined && hasLatex(postContent.childNodes)) {
+    import('./katex.js')
+      .then(module => module.default(postContent))
+      .catch(err => console.log(err));
+  }
+
+  postContent.querySelectorAll("p > img").forEach(p => p.parentElement.style.textAlign = "center");
 
 })();

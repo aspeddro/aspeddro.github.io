@@ -1,7 +1,11 @@
 :root {
-  --main-color: #0070f3;
+  --color-scale-blue-0: #0070f3;
+  --color-scale-green-0: #34d058;
+  --color-scale-yellow-0: #ffd33d;
+
+  --main-color: var(--color-scale-blue-0);
   --main-light-color: #ddeaf9;
-  --text-color: #47495e;
+  --text-color: #1b1d25;
   --text-color-dark: #1b1d25;
   --color-green-scale-1: #8fbc8f;
   --color-red-scale-1: #ff6a6a;

@@ -10,6 +10,8 @@ Discord: aspeddro#9541
 
 Matrix: [@aspeddro:matrix.org](matrix:u/aspeddro:matrix.org)
 
+CV: [PDF (PT-BR)](./assets/cv.pdf)
+
 \---
 
 🔨 building...

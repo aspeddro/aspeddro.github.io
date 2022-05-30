@@ -1,6 +1,0 @@
-[[redirects]]
-  from = "https://aspeddro.netlify.app/*"
-  to = "https://aspeddro.me/:splat"
-  status = 301
-  force = true
-  headers = {X-From = "Netlify"}
